@@ -1,7 +1,3 @@
-package com.google.cloud;
-
-
-
 import java.io.IOException;
 
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +9,7 @@ import com.google.appengine.api.blobstore.BlobKey;
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 
-@WebServlet("/server")
+@WebServlet("/serve")
 public class Server extends HttpServlet {
     private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 

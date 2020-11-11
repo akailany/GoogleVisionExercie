@@ -30,13 +30,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Label Detection</title>
+    <title>Google Vision API Output</title>
 </head>
 <body>
 
 <table>
     <tr>
-        <td align="center"><h1><span class="badge badge-light">Label Detection</span></h1></td>
+        <td align="center"><h1>Label Detection</h1></td>
     </tr>
     <tr>
         <td><br></td>
@@ -46,10 +46,7 @@
 
 <table>
     <tr>
-        <td><h3><span class="badge badge-primary">Uploaded image</span></h3></td>
-    </tr>
-    <tr>
-        <td><br></td>
+        <td><h3>Image</h3></td>
     </tr>
     <tr>
         <td><br></td>
@@ -64,29 +61,29 @@
     <tr>
         <td><br></td>
     </tr>
+    <tr>
+        <td><br></td>
+    </tr>
     <%
         List<EntityAnnotation> labels = (List<EntityAnnotation>) request.getAttribute("labels");
     %>
     <tr>
-        <td><h3><span class="badge badge-primary">Labels from Google Vision</span></h3></td>
-    </tr>
-    <tr>
-        <td><br></td>
+        <td><h3>Google Vision API Label Detection</h3></td>
     </tr>
     <tr>
         <td><br></td>
     </tr>
     <tr>
 
-        <table class="table table-dark">
+        <table style="width:512px"; class="table table-striped">
             <thead>
 
             <tr>
-                <th scope="col">Label</th>
-                <th scope="col">Score</th>
-
+                <th scope="col"; style="width:512px">Detected Label</th>
+                <th scope="col"; style="width:512px">Score</th>
             </tr>
             </thead>
+
             <tbody>
             <c:forEach items="${labels}" var="label">
                 <tr>
@@ -95,7 +92,11 @@
                 </tr>
             </c:forEach>
             </tbody>
-        </table>		</tr>
+        </table>
+        <td><br></td>
+        <td><br></td>
+
+    </tr>
     <tr>
         <td><br></td>
     </tr>
@@ -104,7 +105,13 @@
     </tr>
 
     <tr>
-<%--        <td><a href="/">Reset Image</</a></td>--%>
+        <td><a href="/">Try Again!</</a></td>
+    </tr>
+    <tr>
+        <td><br></td>
+    </tr>
+    <tr>
+        <td><br></td>
     </tr>
 </table>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

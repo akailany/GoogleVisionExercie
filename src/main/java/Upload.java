@@ -1,5 +1,3 @@
-package com.google.cloud;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,8 +26,8 @@ import com.google.cloud.vision.v1.Image;
 import com.google.cloud.vision.v1.ImageAnnotatorClient;
 import com.google.protobuf.ByteString;
 
-@WebServlet("/uploader")
-public class Uploader extends HttpServlet {
+@WebServlet("/upload")
+public class Upload extends HttpServlet {
     private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 
     @Override
